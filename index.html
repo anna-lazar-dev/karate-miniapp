@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karate Trainer</title>
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Telegram WebApp SDK (безопасно подключать всегда) -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="title">
+      <h1>Karate Trainer</h1>
+      <p class="subtitle">Терминология • мини-квиз</p>
+    </div>
+
+    <div class="top-actions">
+      <div class="tg-badge" id="tgBadge" hidden>
+        <span id="tgUser"></span>
+      </div>
+
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- MENU -->
+  <section class="card" id="menuCard">
+    <div class="row">
+      <label class="label">Режим</label>
+      <div class="segmented">
+        <button id="modeJpRu" class="seg active" type="button">JP → RU</button>
+        <button id="modeRuJp" class="seg" type="button">RU → JP</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="label" for="topicSelect">Тема</label>
+      <select id="topicSelect"></select>
+    </div>
+
+    <div class="row">
+      <label class="label" for="countSelect">Вопросов</label>
+      <select id="countSelect">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <button id="startBtn" class="btn primary" type="button">Начать тренировку</button>
+
+<div class="menu-actions">
+  <button id="dictionaryBtn" class="btn info" type="button">Открыть словарь</button>
+  <button id="dojokunBtn" class="btn dojo" type="button">Додзё-кун</button>
+</div>
+
+    <p class="hint">Работает в браузере и внутри Telegram.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="card" id="quizCard" hidden>
+    <div class="quiz-head">
+      <div>
+        <span id="qIndex">1</span>/<span id="qTotal">10</span>
+      </div>
+      <div>
+        Очки: <span id="score">0</span>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q-label">Вопрос:</div>
+      <div id="prompt" class="prompt">...</div>
+    </div>
+
+    <div id="answers" class="answers"></div>
+
+    <div class="quiz-actions">
+      <button id="quitBtn" class="ghost" type="button">Выйти</button>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="card" id="resultCard" hidden>
+    <h2>Результат</h2>
+
+    <p>
+      Правильных:
+      <b><span id="finalCorrect">0</span></b>
+      из
+      <b><span id="finalTotal">10</span></b>
+    </p>
+
+    <div id="mistakesBox" class="mistakes" hidden>
+      <h3>Ошибки</h3>
+      <ul id="mistakesList"></ul>
+    </div>
+
+    <div class="row row-gap">
+      <button id="retryBtn" class="primary" type="button">Повторить</button>
+      <button id="backBtn" class="ghost" type="button">В меню</button>
+    </div>
+  </section>
+
+  <!-- DICTIONARY -->
+  <section class="card" id="dictionaryCard" hidden>
+    <div class="dict-head">
+      <h2>Словарь</h2>
+      <button id="closeDictionaryBtn" class="icon-btn" type="button">✕</button>
+    </div>
+
+    <div class="row">
+      <label class="label" for="dictTopicSelect">Тема</label>
+      <select id="dictTopicSelect"></select>
+    </div>
+
+    <input id="searchInput" type="text" placeholder="Поиск: rei, mae-geri, блок..." />
+
+    <div id="dictionaryList" class="dictionary"></div>
+
+    <button id="closeDictionaryBtn2" class="ghost" type="button">Назад</button>
+  </section>
+
+  <!-- DOJOKUN -->
+<section class="card" id="dojokunCard" hidden>
+  <div class="dict-head">
+    <h2 id="dojokunTitle">Додзё-кун</h2>
+    <button id="closeDojokunBtn" class="icon-btn" type="button">✕</button>
+  </div>
+
+  <ol id="dojokunList" class="dojokun-list"></ol>
+
+  <div id="dojokunFooter" class="dojokun-footer"></div>
+
+  <button id="closeDojokunBtn2" class="ghost" type="button">Назад</button>
+</section>
+
+
+  <footer class="footer">
+    <small>v0.1 • MVP</small>
+  </footer>
+
+</div>
+
+<script type="module" src="./app.js"></script>
+
+</body>
+</html>

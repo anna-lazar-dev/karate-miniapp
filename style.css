@@ -1,0 +1,348 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1c1f26;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #4c8dff;
+  --danger: #ff5a6a;
+}
+
+/* тёмная тема включается классом .dark на body */
+body.dark {
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #e9eef5;
+  --muted: #a8b3c2;
+  --border: #2a2f3a;
+}
+
+
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+h1 { margin: 0; font-size: 22px; }
+.subtitle { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+
+.tg-badge {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 14px;
+  margin: 12px 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.row-gap { grid-template-columns: 1fr; gap: 10px; }
+
+.label { color: var(--muted); font-size: 13px; }
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.ghost { background: transparent; }
+
+.primary {
+  background: var(--primary);
+  border-color: transparent;
+  color: #081221;
+  font-weight: 700;
+}
+
+.ghost{ background: transparent; }
+
+.hint { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.seg {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.seg.active {
+  background: rgba(76, 141, 255, 0.22);
+  border-color: rgba(76, 141, 255, 0.55);
+}
+
+.quiz-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.question .q-label { color: var(--muted); font-size: 12px; }
+.prompt { font-size: 22px; font-weight: 800; margin-top: 6px; }
+
+.answer{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.answer.correct {
+  border-color: rgba(92, 255, 148, 0.6);
+  background: rgba(92, 255, 148, 0.12);
+}
+
+.answer.wrong {
+  border-color: rgba(255, 90, 106, 0.7);
+  background: rgba(255, 90, 106, 0.12);
+}
+
+.footer { color: var(--muted); text-align: center; margin-top: 12px; }
+.mistakes ul { margin: 8px 0 0; padding-left: 18px; }
+
+.small {
+  padding: 8px 10px;
+  font-size: 14px;
+  width: auto;
+}
+
+.icon-btn {
+  width: auto;              /* важно */
+  min-width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dict-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dictionary {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.dict-item {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(0,0,0,0.02);
+}
+
+body.dark .dict-item {
+  background: rgba(255,255,255,0.04);
+}
+
+.dict-jp {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.dict-ru {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dict-meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.dict-topline{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.dict-romaji{
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.dict-ja{
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.dk-ja{
+  font-weight:700;
+  font-size:18px;
+}
+
+.dk-romaji{
+  opacity:.7;
+  font-size:13px;
+}
+
+.dk-ru{
+  margin-top:4px;
+}
+
+.dk-ja{
+  font-weight:700;
+  font-size:18px;
+}
+
+.dk-romaji{
+  opacity:.7;
+  font-size:13px;
+}
+
+.dk-ru{
+  margin-top:4px;
+}
+
+/* --- дополнительные типы кнопок --- */
+
+.info{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(90,150,255,.45);
+  background:rgba(90,150,255,.12);
+  color:var(--text);
+  cursor:pointer;
+  font-size:15px;
+  transition:.15s;
+}
+
+.info:hover{
+  background:rgba(90,150,255,.22);
+}
+
+
+/* кнопка Додзё-кун — теплый акцент */
+
+.dojo{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,170,60,.5);
+  background:rgba(255,170,60,.15);
+  color:var(--text);
+  cursor:pointer;
+  font-size:15px;
+  transition:.15s;
+}
+
+.dojo:hover{
+  background:rgba(255,170,60,.25);
+}
+
+/* базовый стиль для любых кнопок приложения */
+.btn{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* чтобы две кнопки стояли красиво в ряд */
+.menu-actions{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* цветные кнопки меню */
+button.btn.info{
+  border-color: rgba(90,150,255,.55);
+  background: rgba(90,150,255,.14);
+}
+
+button.btn.dojo{
+  border-color: rgba(255,170,60,.60);
+  background: rgba(255,170,60,.18);
+}
+
+button.btn.info:hover{
+  background: rgba(90,150,255,.22);
+}
+
+button.btn.dojo:hover{
+  background: rgba(255,170,60,.26);
+}
+
+/* главная кнопка */
+button.btn.primary{
+  background: var(--primary);
+  border-color: transparent;
+  color: #081221;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(76,141,255,.30);
+}
+
+button.btn.primary:hover{
+  filter: brightness(0.98);
+}

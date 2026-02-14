@@ -1,0 +1,51 @@
+{
+  "title": {
+    "ru": "Додзё-кун",
+    "ja": "道場訓",
+    "romaji": "Dojo Kun"
+  },
+
+  "lines": [
+    {
+      "romaji": "Hitotsu! Wareware wa, shinshin o renmashi, kakko fubatsu no shingi o kiwameru koto.",
+      "ru": "Мы будем тренировать наши сердца и тела для достижения твердого, непоколебимого духа.",
+      "ja": "一、我々は、心身を錬磨し、確固不抜の心技を極めること"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, bu no shinzui o kiwame, ki ni hasshi, kan ni bin naru koto.",
+      "ru": "Мы будем следовать истинному смыслу воинского пути, чтобы наши чувства всегда были наготове.",
+      "ja": "一、我々は、武の真髄を極め、機に発し、感に敏なること"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, shitsujitsu goken o motte, jiko no seishin o kanyō suru koto.",
+      "ru": "С истинным рвением мы будем культивировать дух самоотрицания.",
+      "ja": "一、我々は、質実剛健を持って、自己の精神を涵養すること"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, reisetsu o omonji, chōjō o keishi, sobō no furumai o tsutsushimu koto.",
+      "ru": "Мы будем соблюдать правила этикета, уважать старших и воздерживаться от насилия.",
+      "ja": "一、我々は、礼節を重んじ、長上を敬し、粗暴の振舞いを慎むこと"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, shinbutsu o tōtobi, kenjō no bitoku o wasurezaru koto.",
+      "ru": "Мы будем почитать богов и Будду и никогда не забудем истинную добродетель скромности.",
+      "ja": "一、我々は、神仏を尊び、謙譲の美徳を忘れざること"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, chisei to tairyoku to o kōjō sase, koto ni nozonde ayamatazaru koto.",
+      "ru": "Мы будем следовать мудрости и силе, не ведая других желаний.",
+      "ja": "一、我々は、知性と体力とを向上させ、事に臨んで過たざること"
+    },
+    {
+      "romaji": "Hitotsu! Wareware wa, shōgai no shugyō o karate no michi ni tsūji, Kyokushin no michi o mattō suru koto.",
+      "ru": "Всю нашу жизнь, через изучение каратэ, мы будем стремиться выполнить истинное предназначение пути Киокушин.",
+      "ja": "一、我々は、生涯の修行を空手の道に通じ、極真の道を全うすること"
+    }
+  ],
+
+  "footer": {
+    "ru": "Осу!",
+    "ja": "押忍",
+    "romaji": "Osu!"
+  }
+}
