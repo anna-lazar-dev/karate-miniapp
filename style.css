@@ -346,3 +346,22 @@ button.btn.primary{
 button.btn.primary:hover{
   filter: brightness(0.98);
 }
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.btn::first-letter{
+  font-size:18px;
+}
+
