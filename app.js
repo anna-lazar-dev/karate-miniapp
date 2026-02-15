@@ -69,6 +69,9 @@ function showScreen(screen, els) {
     dojokunList: document.getElementById("dojokunList"),
     dojokunFooter: document.getElementById("dojokunFooter"),
 
+    dictFilterAll: document.getElementById("dictFilterAll"),
+    dictFilterFav: document.getElementById("dictFilterFav"),
+
     // dictionary
     dictionaryBtn: document.getElementById("dictionaryBtn"),
     dictionaryCard: document.getElementById("dictionaryCard"),

@@ -56,11 +56,11 @@
       </select>
     </div>
 
-    <button id="startBtn" class="btn primary" type="button">🎯Начать тренировку</button>
+    <button id="startBtn" class="btn primary" type="button">🎯 Начать тренировку</button>
 
 <div class="menu-actions">
-  <button id="dictionaryBtn" class="btn info" type="button">📚Открыть словарь</button>
-  <button id="dojokunBtn" class="btn dojo" type="button">🥋Додзё-кун</button>
+  <button id="dictionaryBtn" class="btn info" type="button">📚 Открыть словарь</button>
+  <button id="dojokunBtn" class="btn dojo" type="button">🥋 Додзё-кун</button>
 </div>
 
     <p class="hint">Работает в браузере и внутри Telegram.</p>
@@ -85,7 +85,7 @@
     <div id="answers" class="answers"></div>
 
     <div class="quiz-actions">
-      <button id="quitBtn" class="ghost" type="button">Выйти</button>
+      <button id="quitBtn" class="btn ghost" type="button">Выйти</button>
     </div>
   </section>
 
@@ -106,8 +106,8 @@
     </div>
 
     <div class="row row-gap">
-      <button id="retryBtn" class="primary" type="button">Повторить</button>
-      <button id="backBtn" class="ghost" type="button">В меню</button>
+      <button id="retryBtn" class="btn primary" type="button">Повторить</button>
+      <button id="backBtn" class="btn ghost" type="button">В меню</button>
     </div>
   </section>
 
@@ -116,6 +116,11 @@
     <div class="dict-head">
       <h2>Словарь</h2>
       <button id="closeDictionaryBtn" class="icon-btn" type="button">✕</button>
+    </div>
+
+    <div class="segmented" style="margin: 10px 0;">
+      <button id="dictFilterAll" class="seg active" type="button">Все</button>
+      <button id="dictFilterFav" class="seg" type="button">⭐ Избранное</button>
     </div>
 
     <div class="row">
@@ -127,7 +132,7 @@
 
     <div id="dictionaryList" class="dictionary"></div>
 
-    <button id="closeDictionaryBtn2" class="ghost" type="button">Назад</button>
+    <button id="closeDictionaryBtn2" class="btn ghost" type="button">Назад</button>
   </section>
 
   <!-- DOJOKUN -->
@@ -141,7 +146,7 @@
 
   <div id="dojokunFooter" class="dojokun-footer"></div>
 
-  <button id="closeDojokunBtn2" class="ghost" type="button">Назад</button>
+  <button id="closeDojokunBtn2" class="btn ghost" type="button">Назад</button>
 </section>
 
 

@@ -29,3 +29,25 @@ export function updateStats({ correct, questions, lastMode, lastTopic }) {
   saveStats(next);
   return next;
 }
+
+const FAV_KEY = "karate_favorites_v1";
+
+export function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch {
+    return new Set();
+  }
+}
+
+export function saveFavorites(favSet) {
+  const arr = Array.from(favSet);
+  localStorage.setItem(FAV_KEY, JSON.stringify(arr));
+}
+
+export function termKey(term) {
+  // достаточно стабильно: jp + topic
+  return `${term.jp}__${term.topic ?? ""}`;
+}

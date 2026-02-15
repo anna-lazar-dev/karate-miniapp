@@ -92,7 +92,28 @@ select {
   font-weight: 700;
 }
 
-.ghost{ background: transparent; }
+.ghost{
+  background: rgba(120,130,150,.10);
+  border-color: rgba(120,130,150,.35);
+  color: var(--text);
+  font-weight:500;
+  transition:.15s;
+}
+
+.ghost:hover{
+  background: rgba(120,130,150,.18);
+  border-color: rgba(120,130,150,.55);
+}
+
+body.dark .ghost{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.18);
+}
+
+body.dark .ghost:hover{
+  background: rgba(255,255,255,.10);
+}
+
 
 .hint { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
 
@@ -365,3 +386,64 @@ button.btn.primary:hover{
   font-size:18px;
 }
 
+.btn{
+  transition: transform .08s ease, box-shadow .08s ease, filter .08s ease;
+}
+
+.btn:active{
+  transform: scale(0.98);
+  filter: brightness(0.96);
+}
+
+.star-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+body.dark .star-btn{
+  background: rgba(255,255,255,0.06);
+}
+
+.star-btn.active{
+  border-color: rgba(255, 193, 7, 0.65);
+  background: rgba(255, 193, 7, 0.16);
+}
+
+.dict-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.dict-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.star-btn{
+  border:none;
+  background:transparent;
+  font-size:22px;
+  cursor:pointer;
+  opacity:.55;
+  transition:.15s;
+}
+
+.star-btn:hover{
+  transform:scale(1.15);
+  opacity:.9;
+}
+
+.star-btn.active{
+  opacity:1;
+}
